@@ -1,0 +1,62 @@
+[
+  {
+    "id": "msg_001",
+    "sender": "Alex Chen",
+    "role": "Forward Deployed Engineer - L6",
+    "timestamp": "2026-09-01T09:14:00Z",
+    "channel": "AI GTM Tech - All Team",
+    "content": "Excited to share that our Tier-1 Retail customer just shipped their multi-agent product catalog analyzer to production! Delivered their first agent MVP in 5 days using ADK and Gemini 2.0 Flash.",
+    "reactions_count": 28,
+    "thread_replies_count": 6
+  },
+  {
+    "id": "msg_002",
+    "sender": "Priya Sharma",
+    "role": "AI Customer Engineer - L5",
+    "timestamp": "2026-09-01T11:22:00Z",
+    "channel": "AI GTM Tech - All Team",
+    "content": "Heads up team: we hit a 429 rate limit / quota exceeded error on Vertex AI during peak customer load testing for the fintech POC. Has anyone else encountered TPM limits on gemini-2.0-flash in us-central1?",
+    "reactions_count": 12,
+    "thread_replies_count": 15
+  },
+  {
+    "id": "msg_003",
+    "sender": "Marcus Brody",
+    "role": "Forward Deployed Engineer - L6",
+    "timestamp": "2026-09-02T14:05:00Z",
+    "channel": "AI GTM Tech - All Team",
+    "content": "For anyone working with BigQuery vector search and RAG grounding: make sure to enable batch vector embeddings before tool dispatch. It reduced our grounding latency by 40% for the healthcare provider pilot.",
+    "reactions_count": 19,
+    "thread_replies_count": 4
+  },
+  {
+    "id": "msg_004",
+    "sender": "David Kim",
+    "role": "Tech Lead - FDE",
+    "timestamp": "2026-09-03T10:30:00Z",
+    "channel": "AI GTM Tech - All Team",
+    "content": "P0 alert: Customer bank security team blocked egress due to VPC-SC service perimeter boundary rules. If you are deploying agents inside customer perimeters, ping SecOps for the standardized bridge terraform template.",
+    "reactions_count": 15,
+    "thread_replies_count": 9
+  },
+  {
+    "id": "msg_005",
+    "sender": "Elena Rostova",
+    "role": "Forward Deployed Engineer - L5",
+    "timestamp": "2026-09-04T16:45:00Z",
+    "channel": "AI GTM Tech - All Team",
+    "content": "Great milestone: The supply chain optimization agent pilot was officially approved for full enterprise rollout! Customer leadership loved the sub-agent handoff pattern and deterministic tool calling.",
+    "reactions_count": 34,
+    "thread_replies_count": 8
+  },
+  {
+    "id": "msg_006",
+    "sender": "Jordan Taylor",
+    "role": "AI Outcome CE - L5",
+    "timestamp": "2026-09-05T13:10:00Z",
+    "channel": "AI GTM Tech - All Team",
+    "content": "Model Armor and guardrails are working seamlessly with ADK. We integrated input sanitization and prompt injection filters before invoking external MCP connectors.",
+    "reactions_count": 14,
+    "thread_replies_count": 3
+  }
+]

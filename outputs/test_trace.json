@@ -1,0 +1,79 @@
+{
+  "trace_id": "trace_fde_1788840131",
+  "generated_at": "2026-09-08T04:02:11.124556",
+  "total_spans": 5,
+  "total_duration_ms": 0.03,
+  "spans": [
+    {
+      "name": "CoordinatorAgent.orchestrate_pulse",
+      "duration_ms": 0.0,
+      "status": "OK",
+      "agent_intent": null,
+      "actual_outcome": null,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "error": null,
+      "attributes": {}
+    },
+    {
+      "name": "TopicHunterAgent.execute",
+      "duration_ms": 0.01,
+      "status": "OK",
+      "agent_intent": null,
+      "actual_outcome": null,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "error": null,
+      "attributes": {}
+    },
+    {
+      "name": "RiskDetectorAgent.execute",
+      "duration_ms": 0.01,
+      "status": "OK",
+      "agent_intent": null,
+      "actual_outcome": null,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "error": null,
+      "attributes": {}
+    },
+    {
+      "name": "RiskDetectorAgent.execute",
+      "duration_ms": 0.01,
+      "status": "OK",
+      "agent_intent": null,
+      "actual_outcome": null,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "error": null,
+      "attributes": {}
+    },
+    {
+      "name": "TopicHunterAgent.execute",
+      "duration_ms": 0.01,
+      "status": "OK",
+      "agent_intent": null,
+      "actual_outcome": null,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "error": null,
+      "attributes": {}
+    }
+  ],
+  "metrics": {}
+}

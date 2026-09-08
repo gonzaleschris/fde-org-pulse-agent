@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  fde-pulse-agent:
+    build: .
+    volumes:
+      - ./outputs:/app/outputs
+      - ./data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: ["--input", "data/sample_chat_messages.json", "--week", "2026-W36", "--format", "all", "--export-telemetry"]

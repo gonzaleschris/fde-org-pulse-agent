@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fde-org-pulse-agent"
+version = "1.0.0"
+description = "FDE Org Pulse & Weekly Intelligence Agent for Google Cloud AI GTM Tech"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0"
+]
+
+[project.scripts]
+fde-pulse = "fde_pulse.agent:main"

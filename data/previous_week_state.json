@@ -1,0 +1,27 @@
+{
+  "week_identifier": "2026-W35",
+  "generated_at": "2026-08-31T23:59:59Z",
+  "top_topics": [
+    {
+      "title": "ADK / Agent Starter Pack Adoption & Scaling",
+      "category": "ADK / Agent Starter Pack",
+      "mentions_count": 4,
+      "summary": "Initial prototyping with ADK sub-agents across retail and finance accounts.",
+      "impact_level": "High",
+      "key_contributors": ["Alex Chen", "Priya Sharma"]
+    }
+  ],
+  "active_risks": [
+    {
+      "risk_id": "RISK-001",
+      "severity": "P1",
+      "headline": "Friction in Quota / 429 Rate Limits",
+      "friction_area": "Quota / Rate Limits",
+      "affected_teams_or_customers": ["Priya Sharma"],
+      "symptoms": "Initial quota ceiling observed on early pilot projects.",
+      "suggested_mitigation": "Request proactive quota buffer."
+    }
+  ],
+  "wins_count": 1,
+  "total_message_volume": 4
+}
