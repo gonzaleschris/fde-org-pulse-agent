@@ -144,25 +144,4 @@ python3 -B -m unittest discover -s tests -v
 python -m fde_pulse.agent --week 2026-W36 --format all --export-telemetry
 ```
 
----
 
-## 🎥 Video Walkthrough Script (2-3 Minutes)
-
-1. **Problem & Overview (0:00 - 0:30):**  
-   *"In the Google Cloud FDE organization, high-velocity chat channels like 'AI GTM Tech - All Team' generate hundreds of critical technical messages weekly. The FDE Org Pulse Agent autonomously synthesizes trending agent patterns, customer wins, and operational bottlenecks into an executive brief."*
-2. **Architecture & 5 Rubric Criteria (0:30 - 1:15):**  
-   Show the architecture diagram in `README.md`. Highlight the multi-agent hierarchy (`CoordinatorAgent`, `TopicHunterAgent`, `RiskDetectorAgent`), model routing (`Gemini 2.0 Flash` vs `Pro`), async session memory with history compaction, structured JSON telemetry (Intent vs Outcome), and Terraform IaC with Secret Manager.
-3. **Live Demonstration (1:15 - 2:00):**  
-   Execute `python -m fde_pulse.agent --format all --export-telemetry`. Display the generated executive report in `outputs/` and the OpenTelemetry trace output.
-4. **Conclusion (2:00 - 2:30):**  
-   Show the test suite passing (`python3 -B -m unittest discover -s tests -v`) and explain how this accelerates time to first agent MVP across customer accounts.
-
----
-
-## 📤 Evaluation Submission
-
-1. Ensure your GitHub repo is set to **Public** 🚨.
-2. Go to the Assessment Portal: [https://fde-project-evaluator-510868799189.us-central1.run.app/login](https://fde-project-evaluator-510868799189.us-central1.run.app/login)
-3. Enter your Public GitHub URL: `https://github.com/gonzaleschris/fde-org-pulse-agent`
-4. (Optional) Enter your YouTube video walkthrough link.
-5. Click **Evaluate Project** to obtain your automated score!
