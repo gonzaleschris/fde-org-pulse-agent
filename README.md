@@ -48,18 +48,6 @@
 
 ---
 
-## 🎯 Rubric Alignment & Scoring Breakdown (95/95)
-
-| Evaluation Pillar | Implementation & Architectural Evidence | Source Files |
-| :--- | :--- | :--- |
-| **1. Tool & Interface Design** | • **JSON Schema Constraints:** Typed Pydantic schemas enforcing Gemini structured output (`response_schema`).<br>• **Guided LLM Error Recovery:** Automatic schema validation recovery loops with dynamic error prompt augmentation (`max_retries=2`).<br>• **Docstrings & Parameter Types:** Full parameter definitions and explicit type annotations across all tools.<br>• **PII/Key Sanitization:** Automated redaction of API keys and bearer tokens. | `fde_pulse/models/schemas.py`<br>`fde_pulse/services/llm_client.py`<br>`fde_pulse/tools/` |
-| **2. Context & Memory** | • **Async Memory Operations:** Non-blocking async session management (`AsyncSessionMemory`).<br>• **Persistent Conversational State:** Multi-turn session history tracked by `session_id`.<br>• **System Instructions:** Grounded persona instructions (`SYSTEM_INSTRUCTION`).<br>• **Context Compaction:** Rolling history compaction triggered when context exceeds token bounds (`MAX_HISTORY_TOKENS = 8000`).<br>• **Multi-Week State Store:** SQLite snapshots for Week-over-Week delta computation. | `fde_pulse/memory/session_memory.py`<br>`fde_pulse/memory/state_store.py` |
-| **3. Orchestration & Logic** | • **Multi-Agent Architecture:** Master `CoordinatorAgent` delegating to specialized `TopicHunterAgent` and `RiskDetectorAgent`.<br>• **Model Routing:** Fast workers routed to `gemini-2.0-flash` (low latency tool calling) and synthesis routed to `gemini-2.0-pro-exp`.<br>• **Agentic Guardrails:** Deterministic schema validation and fallback error handlers.<br>• **Human-in-the-Loop (HITL):** Approval hook (`request_human_approval`) prior to finalizing executive reports. | `fde_pulse/agents/coordinator.py`<br>`fde_pulse/agents/topic_hunter.py`<br>`fde_pulse/agents/risk_detector_agent.py`<br>`fde_pulse/services/llm_client.py` |
-| **4. Observability & Tracing** | • **Structured JSON Logging:** Cloud Logging compatible JSON format (`JsonFormatter`) with severity, timestamps, and line numbers.<br>• **Agent Intent vs. Actual Outcome:** Explicitly captured across every pipeline step (`record_intent_outcome`).<br>• **OpenTelemetry Traces:** Distributed span tracing with latency tracking and JSON telemetry export (`outputs/trace_*.json`). | `fde_pulse/observability/telemetry.py` |
-| **5. Infrastructure & CI/CD** | • **Cloud Infrastructure as Code (IaC):** Production Terraform modules (`terraform/`) provisioning Google Cloud Secret Manager, Cloud Run, IAM service accounts, and Vertex AI roles.<br>• **Secure Secret Management:** `SecretManagerService` integrating Google Cloud Secret Manager with environment fallback.<br>• **Automated CI/CD:** GitHub Actions matrix test workflow across Python 3.9, 3.10, 3.11, 3.12 + Docker build.<br>• **100% Test Pass Rate:** 17 comprehensive unit and E2E integration tests. | `terraform/`<br>`fde_pulse/services/secret_manager.py`<br>`.github/workflows/ci.yml`<br>`tests/` |
-
----
-
 ## 📂 Project Structure
 
 ```
